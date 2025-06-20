@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tardezinha da Laurinha - Cardápio Solidário</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;700&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rosa: #ffb6c1;
+            --azul: #a6e3ff;
+            --amarelo: #fffacd;
+            --roxo: #e6c6ff;
+            --verde: #c1f0c1;
+        }
+        
+        body {
+            font-family: 'Comic Neue', cursive;
+            background-color: #fff9fb;
+            margin: 0;
+            padding: 20px;
+            background-image: 
+                radial-gradient(var(--rosa) 2px, transparent 2px),
+                radial-gradient(var(--azul) 2px, transparent 2px);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+            color: #5a5a5a;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 10px 25px rgba(255, 182, 193, 0.3);
+            position: relative;
+            overflow: hidden;
+            border: 3px dashed var(--rosa);
+        }
+        
+        h1 {
+            font-family: 'Baloo Paaji 2', cursive;
+            color: #ff6b9d;
+            font-size: 2.8em;
+            text-align: center;
+            margin: 10px 0 5px;
+            text-shadow: 3px 3px 0px rgba(255, 182, 193, 0.3);
+        }
+        
+        .subtitulo {
+            text-align: center;
+            font-size: 1.3em;
+            color: #ff6b9d;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            font-family: 'Baloo Paaji 2', cursive;
+            color: #6b8cff;
+            background-color: var(--amarelo);
+            padding: 10px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 30px 0 15px;
+            font-size: 1.8em;
+            border: 2px dotted var(--rosa);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0 30px;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        th {
+            background: linear-gradient(to right, var(--rosa), var(--roxo));
+            color: white;
+            font-family: 'Baloo Paaji 2', cursive;
+            font-size: 1.2em;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        
+        td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #ffebf1;
+        }
+        
+        td:first-child {
+            text-align: left;
+        }
+        
+        td:last-child {
+            text-align: right;
+            font-weight: 800;
+            color: #ff6b9d;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #fffafb;
+        }
+        
+        tr:hover {
+            background-color: #fff0f5;
+        }
+        
+        .destaque {
+            font-weight: bold;
+            position: relative;
+        }
+        
+        .destaque::after {
+            content: "✨";
+            position: absolute;
+            right: 10px;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            padding: 20px;
+            background: linear-gradient(to right, var(--azul), var(--verde));
+            border-radius: 20px;
+            color: #333;
+            font-size: 1.1em;
+            text-align: center;
+        }
+        
+        .pix {
+            background: white;
+            color: #32bcad;
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 10px 0;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .decoracao {
+            position: absolute;
+            font-size: 30px;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        .baloes {
+            position: absolute;
+            font-size: 40px;
+            animation: flutuar 5s infinite ease-in-out;
+        }
+        
+        @keyframes flutuar {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .descricao {
+            font-size: 0.9em;
+            color: #777;
+            display: block;
+            margin-top: 3px;
+        }
+
+        th:last-child {
+        text-align: right;
+        padding-right: 15px;
+    }
+
+    .logo {
+    max-width: 150px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    display: block;
+    margin: 0 auto 15px; /* Centraliza e adiciona espaço abaixo */
+    border-radius: 10px; /* Opcional: para cantos arredondados */
+}
+    </style>
+</head>
+<body>
+    <!-- Elementos decorativos -->
+    <div class="baloes" style="top: 50px; left: 5%;">🎈</div>
+    <div class="baloes" style="top: 100px; right: 8%; animation-delay: 0.5s;">🎈</div>
+    <div class="decoracao" style="top: 30%; right: 10%;">☁️</div>
+    <div class="decoracao" style="bottom: 10%; left: 5%;">🌈</div>
+
+    <div class="container">
+        <h1>🎉 Tardezinha da Laurinha 🎈</h1>
+        <p class="subtitulo">💗 Toda renda será destinada ao tratamento da Laurinha, nossa pequena guerreira de 4 aninhos 💗</p>
+        
+        <!-- BEBIDAS -->
+        <h2>🧃 BEBIDAS</h2>
+        <table>
+            <tr>
+                <th>Produto</th>
+                <th>Valor</th>
+            </tr>
+            <tr>
+                <td>Água Mineral sem Gás</td>
+                <td>R$ 3,00</td>
+            </tr>
+            <tr>
+                <td>Água Mineral com Gás</td>
+                <td>R$ 4,00</td>
+            </tr>
+            <tr class="destaque">
+                <td>Chopp Pilsen 300 ml</td>
+                <td>R$ 10,00</td>
+            </tr>
+            <tr>
+                <td>Chopp Pilsen 500 ml</td>
+                <td>R$ 15,00</td>
+            </tr>
+            <tr>
+                <td>Combo 10 Chopp de 500ml</td>
+                <td>R$ 140,00</td>
+            </tr>
+            <tr>
+                <td>Cerveja sem Álcool Heineken (lata)</td>
+                <td>R$ 10,00</td>
+            </tr>
+            <tr>
+                <td>Refrigerante (lata)</td>
+                <td>R$ 7,00</td>
+            </tr>
+            <tr>
+                <td>Suco Valle (lata)</td>
+                <td>R$ 7,00</td>
+            </tr>
+            <tr>
+                <td>Energético Red Bull (lata)</td>
+                <td>R$ 15,00</td>
+            </tr>
+            <tr class="destaque">
+                <td>Quentão</td>
+                <td>R$ 10,00</td>
+            </tr>
+            <tr>
+                <td>Choconhaque</td>
+                <td>R$ 15,00</td>
+            </tr>
+        </table>
+
+        <!-- DRINKS -->
+        <h2>🍹 DRINKS</h2>
+        <table>
+            <tr>
+                <th>Produto</th>
+                <th>Valor</th>
+            </tr>
+            <tr>
+                <td>Gim Tônica</td>
+                <td>R$ 25,00</td>
+            </tr>
+            <tr>
+                <td>Caipirinha</td>
+                <td>R$ 25,00</td>
+            </tr>
+            <tr class="destaque">
+                <td>Caip Fruta com Álcool</td>
+                <td>R$ 30,00</td>
+            </tr>
+            <tr>
+                <td>Caip Fruta sem Álcool</td>
+                <td>R$ 25,00</td>
+            </tr>
+        </table>
+
+        <!-- DOSES -->
+        <h2>🥃 DOSES</h2>
+        <table>
+            <tr>
+                <th>Produto</th>
+                <th>Valor</th>
+            </tr>
+            <tr>
+                <td>Vodka</td>
+                <td>R$ 10,00</td>
+            </tr>
+            <tr>
+                <td>Gin</td>
+                <td>R$ 15,00</td>
+            </tr>
+            <tr>
+                <td>Whisky Red</td>
+                <td>R$ 20,00</td>
+            </tr>
+        </table>
+
+        <!-- COMIDAS -->
+        <h2>🍽️ COMIDAS</h2>
+        <table>
+            <tr>
+                <th>Produto</th>
+                <th>Valor</th>
+            </tr>
+            <tr>
+                <td>Batata Chipps Pequena</td>
+                <td>R$ 15,00</td>
+            </tr>
+            <tr>
+                <td>Batata Chipps Grande</td>
+                <td>R$ 25,00</td>
+            </tr>
+            <tr>
+                <td>Caldo</td>
+                <td>R$ 15,00</td>
+            </tr>
+            <tr class="destaque">
+                <td>Porção de Fritas com Cheddar</td>
+                <td>R$ 25,00</td>
+            </tr>
+            <tr>
+                <td>Espeto Salsichão, Frango e Pernil</td>
+                <td>R$ 12,00</td>
+            </tr>
+            <tr>
+                <td>Espeto Medalhão, Boi e Coração</td>
+                <td>R$ 14,00</td>
+            </tr>
+            <tr>
+                <td>Tortinha de Frango</td>
+                <td>R$ 15,00</td>
+            </tr>
+            <tr>
+                <td>Macarrão na Chapa</td>
+                <td>R$ 25,00</td>
+            </tr>
+            <tr>
+                <td>Porção de Torresmo, Mandioca e Linguiça</td>
+                <td>R$ 30,00</td>
+            </tr>
+            <tr>
+                <td>Hambúrguer Artesanal 01<br>
+                    <span class="descricao">Pão, carne bovina artesanal, cheddar, barbecue e salada</span>
+                </td>
+                <td>R$ 25,00</td>
+            </tr>
+            <tr class="destaque">
+                <td>Hambúrguer Artesanal 02<br>
+                    <span class="descricao">Pão, duas carnes bovinas artesanais, duplo cheddar, duplo bacon, barbecue, molho especial e salada</span>
+                </td>
+                <td>R$ 30,00</td>
+            </tr>
+            <tr>
+                <td>Milho</td>
+                <td>R$ 10,00</td>
+            </tr>
+            <tr>
+                <td>Tropeiro</td>
+                <td>R$ 27,00</td>
+            </tr>
+            <tr>
+                <td>Pastel</td>
+                <td>R$ 6,00</td>
+            </tr>
+            <tr>
+                <td>Salgados</td>
+                <td>R$ 10,00</td>
+            </tr>
+            <tr>
+                <td>Cachorro Quente</td>
+                <td>R$ 15,00</td>
+            </tr>
+        </table>
+
+        <!-- DOCES -->
+        <h2>🍬 DOCES</h2>
+        <table>
+            <tr>
+                <th>Produto</th>
+                <th>Valor</th>
+            </tr>
+            <tr class="destaque">
+                <td>Algodão Doce</td>
+                <td>R$ 8,00</td>
+            </tr>
+            <tr>
+                <td>Açaí</td>
+                <td>R$ 15,00</td>
+            </tr>
+            <tr>
+                <td>Canjica Doce</td>
+                <td>R$ 15,00</td>
+            </tr>
+            <tr>
+                <td>Churros Gourmet</td>
+                <td>R$ 16,00</td>
+            </tr>
+            <tr>
+                <td>Chup-Chup Tradicional</td>
+                <td>R$ 8,00</td>
+            </tr>
+            <tr>
+                <td>Chup-Chup Especial</td>
+                <td>R$ 10,00</td>
+            </tr>
+            <tr>
+                <td>Chup-Chup Alcoólico</td>
+                <td>R$ 12,00</td>
+            </tr>
+            <tr>
+                <td>Pipoca Pequena</td>
+                <td>R$ 12,00</td>
+            </tr>
+            <tr>
+                <td>Pipoca Grande</td>
+                <td>R$ 15,00</td>
+            </tr>
+            <tr>
+                <td>Balde de Pipoca</td>
+                <td>R$ 25,00</td>
+            </tr>
+            <tr>
+                <td>Pipoca Gourmet</td>
+                <td>R$ 15,00</td>
+            </tr>
+            <tr>
+                <td>Morango no Palito</td>
+                <td>R$ 20,00</td>
+            </tr>
+            <tr class="destaque">
+                <td>Maçã do Amor</td>
+                <td>R$ 13,00</td>
+            </tr>
+            <tr>
+                <td>Sundae</td>
+                <td>R$ 12,00</td>
+            </tr>
+            <tr>
+                <td>2 Sundae</td>
+                <td>R$ 20,00</td>
+            </tr>
+            <tr>
+                <td>Cascão</td>
+                <td>R$ 15,00</td>
+            </tr>
+        </table>
+
+        <!-- KIDS -->
+        <h2>🧸 KIDS</h2>
+        <table>
+            <tr>
+                <th>Produto</th>
+                <th>Valor</th>
+            </tr>
+            <tr class="destaque">
+                <td>Espaço Kids</td>
+                <td>R$ 20,00</td>
+            </tr>
+        </table>
+
+        <!-- DIVERSOS -->
+        <h2>🎈 DIVERSOS</h2>
+        <table>
+            <tr>
+                <th>Produto</th>
+                <th>Valor</th>
+            </tr>
+            <tr>
+                <td>Tridente</td>
+                <td>R$ 5,00</td>
+            </tr>
+            <tr>
+                <td>Halls</td>
+                <td>R$ 5,00</td>
+            </tr>
+            <tr>
+                <td>Trento</td>
+                <td>R$ 5,00</td>
+            </tr>
+            <tr>
+                <td>Cigarro de Palha</td>
+                <td>R$ 3,00</td>
+            </tr>
+        </table>
+
+        <div class="footer">
+            <p>Obrigado por fazer parte dessa jornada de amor e solidariedade!</p>
+            <img src="C:\Users\User\Desktop\HTML\Logo_Fundo_Branco_RGB.png" alt="Logomarca Tardezinha da Laurinha" class="logo">
+            <div class="pix">Chave PIX: CPF: 083.027.646-71 – Banco C6
+                Titular: Diogo Vinicius Alves Belarmino (pai da Laurinha) 📱</div>
+            <p>#ForçaLaurinha ✨</p>
+        </div>
+    </div>
+</body>
+</html>
